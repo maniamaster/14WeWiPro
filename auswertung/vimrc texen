@@ -1,0 +1,5 @@
+ map <F12> <c-s>:!make Prohaupt.pdf<CR><CR>
+ 29 imap <F12> <c-s>:!make Prohaupt.pdf<CR><CR>
+ 30 :nmap <c-s> :w<CR>
+ 31 :imap <c-s> <Esc><c-s>
+
