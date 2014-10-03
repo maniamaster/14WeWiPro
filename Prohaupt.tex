@@ -558,10 +558,11 @@ Nach \person{Gauss} ergibt sich für die Fehler von Induktivität $L$ und Widers
 \end{align}
 Es ergeben sich als Resultate:
 \begin{align}
-	L=(0.404\pm0.007)~\mrm{H}\\
-	R=(76\pm18)~\mrm{\Omega}.
+	L_{\mrm{lin}}&=(0.404\pm0.007)~\mrm{H}\\
+	R_{\mrm{lin}}&=(76\pm18)~\mrm{\Omega}.
 	\label{eq:result1}
 \end{align}
+\newpage
 \subsection{Bestimmung der Resonanzfrequenz und des \person{Ohm}schen Widerstands beim Serienresonanzkreis}
 \begin{figure}[h!]
 	\centering
@@ -569,6 +570,32 @@ Es ergeben sich als Resultate:
 	\caption{blablabla}
 	\label{fig:plot2}
 \end{figure}
+Für diesen Auswertungsteil wird die gesamte Impedanz $Z_0=\frac{U}{I}$ über der Kreisfrequenz $\omega=2\pi\cdot f$ aufgetragen (Abbildung \ref{fig:plot2}). Die Messfehler werden analog zum ersten Auswertungsteil gewählt. Mit der \person{Gauss}schen Fehlerfortpflanzung berechnen sich die Fehler nach:
+\begin{align}
+	\sigma_{\omega}&=2 \cdot \pi \cdot \sigma_{f}\\
+	\sigma_{Z_0}&=\frac{1}{I^{2}} \cdot \sqrt{I^{2} \cdot \sigma_{U}^{2} + U^{2} \cdot \sigma_{I}^{2}}.
+	\label{eq:sigmaomegaz02}
+\end{align}
+Nach Gleichung \eqref{eq:impedanz} ist die Impedanz minimal, wenn $\omega L =\frac{1}{\omega C}$ gilt. Für die Resonanzfrequenz ergibt sich also
+\begin{align}
+	\omega_r=\sqrt{\frac{1}{LC}}.
+	\label{eq:resonanz}
+\end{align}
+Beim Resonanzminumum gilt ferner $Z_0=R$. Mithilfe eines Python-Skriptes wird eine nichtlineare Regression nach Gleichung \eqref{eq:impedanz} durchgeführt und nach den Parametern $R$, $L$ und $C$ gefittet. Die Regression ergibt:
+\begin{align}
+	R_{\mrm{fit},1}&=(83.4\pm0.03)~\mrm{\Omega}
+	\label{eq:Rfit1}\\
+	L_{\mrm{fit},1}&=(0.403\pm0.003)~\mrm{H}
+	\label{eq:Lfit1}\\
+	C_{\mrm{fit},1}&=(1.800\pm0.007)~\SI{}{\micro\farad}
+	\label{eq:Cfit1}
+\end{align}
+Die Resonanzfrequenz wird nach Gleichung \eqref{eq:resonanz} berechnet. Man erhält
+\begin{align}
+	\omega_{r,1}&=(1174 \pm 3)~\mrm{Hz}\label{eq:resonanzfrequenz1}\\
+	\sigma_{\omega_{r,1}}&=\frac{1}{2\cdot C^{1.5} \cdot L^{1.5}} \cdot \sqrt{C^{2} \cdot \sigma_{L}^{2} + L^{2} \cdot \sigma_{C}^{2}}.
+	\label{eq:sigmaresonanzfrequenz1}
+\end{align}
 \begin{figure}[h!]
 	\centering
 	\input{zeiger2.pdf_tex}
