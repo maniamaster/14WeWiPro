@@ -38,6 +38,8 @@
 %Für eigenen Zeilenabstand
 \usepackage{setspace} %
 
+
+
 %Für die Seitenformatierung
 \usepackage{lscape} %
 \usepackage{multicol} %
@@ -62,6 +64,9 @@
 \usepackage{latexsym,exscale,stmaryrd} %
 \usepackage{amssymb, amsfonts, amstext} %
 \usepackage{amsmath, mathtools, amsthm} %
+
+%Formelnummerierungen
+\numberwithin{equation}{section}
 
 % Weitere Symbole
 \usepackage[nointegrals]{wasysym} %
@@ -462,20 +467,115 @@ Durch den Quotienten von Imaginär- und Realteil lässt sich ein Ausdruck für d
 	\tan\varphi=\frac{\operatorname{Im}(Z)}{\operatorname{Re}(Z)}.
 	\label{eq:phase}
 \end{align}
-Den Betrag vom komplexen Widerstand $|Z|=\sqrt{\operatorname{Re}(Z)^2+\operatorname{Im}(Z)^2}$ bezeichnet man als Impedanz.
+Den Betrag vom komplexen Widerstand 
+\begin{align}
+	|Z|=\sqrt{\operatorname{Re}(Z)^2+\operatorname{Im}(Z)^2}=\sqrt{R^2+\left(\omega L-\frac{1}{\omega C}\right)^2}
+	\label{eq:impedanz}
+\end{align}
+bezeichnet man als Impedanz.
 \section{Durchführung}
 \label{sec:durchfuehrung}
 
-\subsection{Versuchsaufbau}
+\subsection{Versuchsaufbau und benötigte Materialien}
+\begin{figure}[h!]
+	\centering
+	\includegraphics{reihe.png}
+	\caption{Schaltskizze für den Serienkreis}
+	\label{fig:schaltreihe}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics{para.png}
+	\caption{Schaltskizze für den Parallelkreis}
+	\label{fig:schaltpara}
+\end{figure}
 
+In den Abbildungen \ref{fig:schaltreihe} und \ref{fig:schaltpara} sind die Schaltskizzen der beiden Versuchsaufbauten zu sehen. Benötigt werden eine Wechselspannungsquelle mit variabler Frequenz, ein Kondensator, eine Luftspule, ein \person{Ohm}scher Widerstand, ein Schalter, ein Digitaloszilloskop und vier Multimeter. 
+\subsection{Serienkreis ohne Kondensator}
+\label{sec:serie1}
+Für den ersten Versuchsteil werden die Bauteile gemäß Abbildungen \ref{fig:schaltreihe} in Reihe geschaltet. Der Schalter wird geöffnet, um den Kondensator zu überbrücken. Durch das Oszilloskop darf kein Strom fließen. Um die Phasenverschiebung zwischen Strom und Spannung zu messen, wird es deswegen sowohl direkt an die Spannungsquelle als auch parallel zum \person{Ohm}schen Widerstand geschaltet. Nun wird in einem Frequenzbereich von ca. 60 bis 80\;Hz für zehn verschiedene Frequenzen der Strom $I$ durch den \person{Ohm}schen Widerstand, die Gesamtspannung $U$ und die Phasenverschiebung  $\varphi$ zwischen Strom und Spannung gemessen. Die Spannung kann dabei an der Spannungsquelle eingestellt werden. Gemessen wird sie trotz der Anzeige der Spannungsquelle am Oszilloskop, da sie dort genauer ausgegeben wird. Die Phasenverschiebung ist ebenfalls am Oszilloskop abzulesen. Dafür muss sich dieses in dem Modus "`Messung"' befinden. Zu beachten ist, dass der Innenwiderstand des Amperemeters von dem eingestellten Messbereich abhängt. Um einer möglichen Verfälschung der Messwerte vorzubeugen, sollte deshalb für jeden Versuchsabschnitt ein einheitlicher Messbereich eingestellt werden. Die Widerstände der Voltmeter hingegen sind als unendlich angenommen.
+
+\subsection{Serienkreis mit Kondensator}
+Für diesen Versuchsteil wird der Schalter geöffnet, wodurch die Schaltung zu einem Serienschwingkreis wird. Wie in Sektion \ref{sec:serie1} wird für den gleichen Frequenzbereich die Gesamtspannung $U$, der Gesamtstrom $I$ und die Phasenverschiebung $\varphi$ gemessen. Hierbei ist darauf zu achten, die Resonanzstelle besonders genau abzutasten, um eine genaue Bestimmung der Resonanzfrequenz zu ermöglichen.
+
+\subsection{Parallelkreis}
+Nun wird der Parallelkreis ohne den \person{Ohm}schen Widerstand aus Abbildung \ref{fig:schaltpara} aufgebaut. Er besteht aus einer Spule  und einem parallelgeschalteten Kondensator. Der in der Spule integrierte Spulenwiderstand $R_L$ ist in Reihe zu dieser. Das Volt- und Amperemeter wird analog zu den Vorherigen Schaltungen angeschlossen. Erneut wird die Spannung $U$, der Strom $I$ und die Phasenverschiebung $\varphi$ notiert, wobei die Resonanzstelle besonders genau vermessen wird.
+\subsection{Ausmessung der Bauteile}
+Als letztes werden mit den Multimetern die elektrischen Bauteile vermessen. Hierzu gehören der Innenwiderstand des Amperemeters für alle verwendeten Messbereiche, der Widerstand des \person{Ohm}schen Widerstandes, der Widerstand der Spule, sowie die Kapazität des Kondensators. Ebenfalls zu notieren sind der Durchmesser und die Windungszahl der Luftspule.
 \section{Auswertung}
 \label{sec:auswertung}
+\subsection{Bestimmung der Induktivität und des \person{Ohm}schen Widerstands beim Serienkreis ohne Kondensator}
+Aus der Messreihe für den Serienkreis bei überbrücktem Kondensator (Sektion \ref{sec:serie1}) soll die Induktivität $L$ der Spule, sowie der gesamte \person{Ohm}sche Widerstand $R$, bestehend aus Spulenwiderstand $R_L$ und einzelnem \person{Ohm}schen Widerstand $R_\Omega$, bestimmt werden. Hierfür betrachtet man Gleichung \eqref{eq:zserie}. Da der Kondensator überbrückt ist, besteht der Imagiärteil  , woraus für den komplexen Widerstand $Z$ gilt:
+\begin{align}
+	Z(\omega)=R+i~\omega L.
+	\label{eq:impedRL}
+\end{align}
+Berechnet man nun die Impedanz gemäß Gleichung \eqref{eq:impedanz} und quadriert, so erhält man
+\begin{align}
+	\left( \frac{U}{I} \right)^2=Z^2=\underbrace{R^2}_b+\omega^2 \underbrace{L^2}_m.
+	\label{eq:gerade}
+\end{align}
+Man erwartet also einen linearen Zusammenhang zwischen dem Impedanzquadrat $Z^2$ und dem Quadrat der Kreisfrequenz $\omega^2$. Die Steigung $m$ entspricht dabei dem Quadrat der Induktivität $L^2$ und der Ordinatenabschnitt wird als Quadrat des \person{Ohm}schen Gesamtwiderstands $R^2$ identifiziert.
+Für die Messfehler der Multimeter wurde der größtmögliche Fehler nach \cite[35]{prakti} verwendet, da die während des Versuchs angenommenen Fehler zu klein sind. Sie sind In Tabelle \ref{tab:messfehler} zu sehen.
+\begin{table}
+	\centering
+	\begin{tabular}{l|l}
+		\hline
+		Messbereich&Fehler\\\hline
+		alle Spannungen&$1\%$ v. Messwert + 3 Digits\\
+		alle Ströme&$1.5\%$ v Messwert + 3 Digits\\\hline
+	\end{tabular}
+	\caption{Messfehler der Multimeter}
+	\label{tab:messfehler}
+\end{table}
+Der Fehler der Frequenz wurde einheitlich auf $\sigma_f=1$ gesetzt, da der auf dem Oszilloskop ausgegebene Wert innerhalb dieses Bereichs schwankte. Das Kreisfrequenzquadrat berechnet sich nach $\omega^2=\left( 2\pi f \right)^2$. Mit der \person{Gauss}schen Fehlerfortpflanzung ergibt sich ein Fehler von 
+\begin{align}
+	\sigma_{\omega^2}=8  \pi^{2}  f\cdot \sigma_{f}.
+	\label{eq:sigmaomega}
+\end{align}
+ Der Fehler der gesamten Impedanz berechnet sich nach
+\begin{align}
+	\sigma_{Z_0^2}=\frac{2}{I^{3}} \cdot U \cdot \sqrt{I^{2} \cdot \sigma_{U}^{2} + U^{2} \cdot \sigma_{I}^{2}}.
+	\label{eq:sigmaz0}
+\end{align}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{plot1.pdf}
+	\caption{Auswertung des Serienkreises ohne Kondensator. Das Quadrat der Impedanz wird über dem Quadrat der Kreisfrequenz aufgetragen. Es ergibt sich wie erwartet ein linearer Zusammenhang. In rot sind die Messwerte samt Fehler, in blau ist die Regressionsgerade aufgetragen.}
+	\label{fig:plot1}
+\end{figure}
+
+Die Auftragung des Impedanzquadrates über dem Kreisfrequenzquadrat ist in Abbildung \ref{fig:plot1} zu sehen. Anschließend wird eine lineare Regression durchgeführt. Die Regressionsgerade ist ebenfalls in Abbildung \ref{fig:plot1} eingezeichnet. Man erhält als Parameter:
+\begin{align}
+	m&=L^2=(0.163\pm0.005)~\mrm{H}^2\\
+	b&=R^2=(6\pm3)\times 10^3~\mrm{\Omega}^2
+	\label{eq:plot1}
+\end{align}
+Nach \person{Gauss} ergibt sich für die Fehler von Induktivität $L$ und Widerstand $R$:
+\begin{align}
+	\sigma_L=\frac{1}{2\sqrt{m}}\cdot\sigma_m,\qquad\sigma_R=\frac{1}{2\sqrt{m}}\cdot\sigma_b.
+	\label{eq:sigma1}
+\end{align}
+Es ergeben sich als Resultate:
+\begin{align}
+	L=(0.404\pm0.007)~\mrm{H}\\
+	R=(76\pm18)~\mrm{\Omega}.
+	\label{eq:result1}
+\end{align}
+\subsection{Bestimmung der Resonanzfrequenz und des \person{Ohm}schen Widerstands beim Serienresonanzkreis}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{plot2.pdf}
+	\caption{blablabla}
+	\label{fig:plot2}
+\end{figure}
 \begin{figure}[h!]
 	\centering
 	\input{zeiger2.pdf_tex}
 	\caption{BLAH}
 	\label{fig:zeiger2}
 \end{figure}
+
 
 \section{Diskussion}
 \label{sec:diskussion}
