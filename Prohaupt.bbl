@@ -1,0 +1,78 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 0.8i $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{demtroeder2}{book}{}
+  \name{author}{1}{%
+    {{Demtröder}{D.}%
+     {W.}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag, Berlin Heidelberg}%
+  }
+  \strng{namehash}{DW1}
+  \strng{fullhash}{DW1}
+  \field{sortinit}{D}
+  \field{edition}{6}
+  \field{isbn}{978-3-642-29943-8}
+  \field{title}{Experimentalphysik 2, Elektrizität und Optik}
+  \field{year}{2012}
+\endentry
+
+\entry{nol3}{book}{}
+  \name{author}{1}{%
+    {{Nolting}{N.}%
+     {Wolfgang}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag, Berlin Heidelberg}%
+  }
+  \strng{namehash}{NW1}
+  \strng{fullhash}{NW1}
+  \field{sortinit}{N}
+  \field{isbn}{978-3-642-25465-9}
+  \field{title}{Grundkurs Theoretische Physik 3 - Elektrodynamik}
+  \field{year}{2013}
+\endentry
+
+\entry{prakti}{book}{}
+  \name{author}{1}{%
+    {{Schaaf}{S.}%
+     {Jörn Große-Knetter~Peter}{J.~G.-K.~P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Universitätsdrucke Göttigen}%
+  }
+  \strng{namehash}{SJGKP1}
+  \strng{fullhash}{SJGKP1}
+  \field{sortinit}{S}
+  \field{isbn}{978-3-86395-157-3}
+  \field{title}{Das Physikalische Praktikum, Handbuch 2014 für Studentinnen
+  und Studenten der Physik}
+  \field{year}{2014}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Prohaupt.aux
+The style file: biblatex.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Prohaupt-blx.bib
+Database file #2: literatur.bib
+I was expecting a `,' or a `}'---line 85 of file literatur.bib
+ :   
+ :   Owner                    = {eric},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Biblatex version: 0.8i
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 4 entries,
+            5526 wiz_defined-function locations,
+            1059 strings with 7937 characters,
+and the built_in function-call counts, 10878 in all, are:
+= -- 527
+> -- 390
+< -- 76
++ -- 181
+- -- 96
+* -- 535
+:= -- 864
+add.period$ -- 0
+call.type$ -- 4
+change.case$ -- 125
+chr.to.int$ -- 34
+cite$ -- 6
+duplicate$ -- 1166
+empty$ -- 1117
+format.name$ -- 147
+if$ -- 2461
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 0
+newline$ -- 77
+num.names$ -- 227
+pop$ -- 861
+preamble$ -- 1
+purify$ -- 128
+quote$ -- 0
+skip$ -- 608
+stack$ -- 0
+substring$ -- 499
+swap$ -- 333
+text.length$ -- 91
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 138
+warning$ -- 0
+while$ -- 104
+width$ -- 0
+write$ -- 72
+(There was 1 error message)
