@@ -306,7 +306,7 @@ breakindent=3ex
            {kevin.luedemann@stud.uni-goettingen.de} }
 \newcommand{\gruppe}{B002}
 \newcommand{\durchfuehrungsdatum}{08.09.2014}
-\newcommand{\abgabedatum}{06.10.2014}
+\newcommand{\abgabedatum}{05.10.2014}
 
 %Metainformationen
 \hypersetup{
@@ -386,7 +386,7 @@ schreiben. Es ist üblich, zur Vereinfachung Strom und Spannung als komplexe Gr�
 \begin{align}
 	U_e(t)&=U_0e^{i\omega t}
 	\label{eq:complexspannung}\\
-	I(t)&=I_0e^{i\omega t-\varphi}.
+	I(t)&=I_0e^{i(\omega t-\varphi)}.
 	\label{eq:complexstrom}
 \end{align}
 Dabei ist der Realteil stets der physikalisch relevante Wert.
@@ -395,7 +395,7 @@ Als Verallgemeinerung des Widerstands wird der komplexe Widerstand $Z$ eingefüh
 	Z=\frac{U_e}{I}=\frac{U_0}{I_0}e^{i\varphi}.
 	\label{eq:z}
 \end{align}
-\subsection{Ohm'scher Widerstand}
+\subsection{\person{Ohm}scher Widerstand}
 Betrachtet man einen Stromkreis, welcher nur aus einem \person{Ohm}schen Widerstand besteht, so gilt nach dem \person{Ohm}schen Gesetz
 \begin{align}
 	U(t)=R\cdot I,
@@ -424,7 +424,7 @@ Durch Einsetzen und Integration erhält man als induktiven Widerstand \cite[256]
 \end{align}
 welcher rein imaginär ist. Der Strom ist um $\varphi=\frac{\pi}{2}$ gegenüber der Spannung verzögert.
 \subsection{Kapazitiver Widerstand}
-Jetzt besteht der Stromkreis, an dem die Wechselspannung anliegt lediglich aus einer Kapazität $C$. Für die Spannung an einem Kondensator gilt \cite[152]{demtroeder2}
+Jetzt besteht der Stromkreis, an dem die Wechselspannung anliegt, lediglich aus einer Kapazität $C$. Für die Spannung an einem Kondensator gilt \cite[152]{demtroeder2}
 \begin{align}
 	U_e=\frac{Q}{C}.
 	\label{eq:kond}
@@ -481,26 +481,26 @@ bezeichnet man als Impedanz.
 \begin{figure}[h!]
 	\centering
 	\includegraphics{reihe.png}
-	\caption{Schaltskizze für den Serienkreis}
+	\caption{Schaltskizze für den Serienkreis \cite[Abgerufen am: 05.10.2014]{LP14}}
 	\label{fig:schaltreihe}
 \end{figure}
 \begin{figure}[h!]
 	\centering
 	\includegraphics{para.png}
-	\caption{Schaltskizze für den Parallelkreis}
+	\caption{Schaltskizze für den Parallelkreis \cite[Abgerufen am: 05.10.2014]{LP14}}
 	\label{fig:schaltpara}
 \end{figure}
 
 In den Abbildungen \ref{fig:schaltreihe} und \ref{fig:schaltpara} sind die Schaltskizzen der beiden Versuchsaufbauten zu sehen. Benötigt werden eine Wechselspannungsquelle mit variabler Frequenz, ein Kondensator, eine Luftspule, ein \person{Ohm}scher Widerstand, ein Schalter, ein Digitaloszilloskop und vier Multimeter. 
 \subsection{Serienkreis ohne Kondensator}
 \label{sec:serie1}
-Für den ersten Versuchsteil werden die Bauteile gemäß Abbildungen \ref{fig:schaltreihe} und \ref{fig:schaltpara} in Reihe geschaltet. Der Schalter wird geöffnet, um den Kondensator zu überbrücken. Durch das Oszilloskop darf kein Strom fließen. Um die Phasenverschiebung zwischen Strom und Spannung zu messen, wird es deswegen sowohl direkt an die Spannungsquelle als auch parallel zum \person{Ohm}schen Widerstand geschaltet. Nun wird in einem Frequenzbereich von ca. 60 bis 80\;Hz für zehn verschiedene Frequenzen der Strom $I$ durch den \person{Ohm}schen Widerstand, die Gesamtspannung $U$ und die Phasenverschiebung  $\varphi$ zwischen Strom und Spannung gemessen. Die Spannung kann dabei an der Spannungsquelle eingestellt werden. Gemessen wird sie trotz der Anzeige der Spannungsquelle am Oszilloskop, da sie dort genauer ausgegeben wird. Die Phasenverschiebung ist ebenfalls am Oszilloskop abzulesen. Dafür muss sich dieses in dem Modus "`Messung"' befinden. Zu beachten ist, dass der Innenwiderstand des Amperemeters von dem eingestellten Messbereich abhängt. Um einer möglichen Verfälschung der Messwerte vorzubeugen, sollte deshalb für jeden Versuchsabschnitt ein einheitlicher Messbereich eingestellt werden. Die Widerstände der Voltmeter hingegen sind als unendlich angenommen.
+Für den ersten Versuchsteil werden die Bauteile gemäß Abbildungen \ref{fig:schaltreihe} und \ref{fig:schaltpara} in Reihe geschaltet. Der Schalter wird geöffnet, um den Kondensator zu überbrücken. Durch das Oszilloskop darf kein Strom fließen. Um die Phasenverschiebung zwischen Strom und Spannung zu messen, wird es deswegen sowohl direkt an die Spannungsquelle als auch parallel zum \person{Ohm}schen Widerstand geschaltet. Nun wird in einem Frequenzbereich von ca. 60 bis 480\;Hz für zehn verschiedene Frequenzen der Strom $I$ durch den \person{Ohm}schen Widerstand, die Gesamtspannung $U$ und die Phasenverschiebung  $\varphi$ zwischen Strom und Spannung gemessen. Die Spannung kann dabei an der Spannungsquelle eingestellt werden. Gemessen wird sie trotz der Anzeige der Spannungsquelle am Oszilloskop, da sie dort genauer ausgegeben wird. Die Phasenverschiebung ist ebenfalls am Oszilloskop abzulesen. Dafür muss sich dieses in dem Modus "`Messung"' befinden. Zu beachten ist, dass der Innenwiderstand des Amperemeters von dem eingestellten Messbereich abhängt. Um einer möglichen Verfälschung der Messwerte vorzubeugen, sollte deshalb für jeden Versuchsabschnitt ein einheitlicher Messbereich eingestellt werden. Die Widerstände der Voltmeter hingegen sind als unendlich angenommen.
 
 \subsection{Serienkreis mit Kondensator}
 Für diesen Versuchsteil wird der Schalter geöffnet, wodurch die Schaltung zu einem Serienschwingkreis wird. Wie in Sektion \ref{sec:serie1} wird für den gleichen Frequenzbereich die Gesamtspannung $U$, der Gesamtstrom $I$ und die Phasenverschiebung $\varphi$ gemessen. Hierbei ist darauf zu achten, die Resonanzstelle besonders genau abzutasten, um eine genaue Bestimmung der Resonanzfrequenz zu ermöglichen.
 
 \subsection{Parallelkreis}
-Nun wird der Parallelkreis ohne den \person{Ohm}schen Widerstand aus Abbildung \ref{fig:schaltpara} aufgebaut. Er besteht aus einer Spule  und einem parallelgeschalteten Kondensator. Der in der Spule integrierte Spulenwiderstand $R_L$ ist in Reihe zu dieser geschaltet. Das Volt- und Amperemeter wird analog zu den vorherigen Schaltungen angeschlossen. Erneut wird die Spannung $U$, der Strom $I$ und die Phasenverschiebung $\varphi$ notiert, wobei die Resonanzstelle besonders genau vermessen wird.
+Nun wird der Parallelkreis ohne den \person{Ohm}schen Widerstand aus Abbildung \ref{fig:schaltpara} aufgebaut. Er besteht aus einer Spule  und einem parallel geschalteten Kondensator. Der in der Spule integrierte Spulenwiderstand $R_L$ ist in Reihe zu dieser geschaltet. Das Volt- und Amperemeter wird analog zu den vorherigen Schaltungen angeschlossen. Erneut wird die Spannung $U$, der Strom $I$ und die Phasenverschiebung $\varphi$ notiert, wobei die Resonanzstelle besonders genau vermessen wird.
 \subsection{Ausmessung der Bauteile}
 Als letztes werden mit den Multimetern die elektrischen Bauteile vermessen. Hierzu gehören der Innenwiderstand des Amperemeters für alle verwendeten Messbereiche, der Widerstand des \person{Ohm}schen Widerstandes, der Widerstand der Spule, sowie die Kapazität des Kondensators. Ebenfalls zu notieren sind der Durchmesser und die Windungszahl der Luftspule.
 \section{Auswertung}
@@ -514,7 +514,7 @@ Aus der Messreihe für den Serienkreis bei überbrücktem Kondensator (Sektion \
 \end{align}
 Berechnet man nun die Impedanz gemäß Gleichung \eqref{eq:impedanz} und quadriert, so erhält man
 \begin{align}
-	\left( \frac{U}{I} \right)^2=Z^2=\underbrace{R^2}_b+\omega^2 \underbrace{L^2}_m.
+	\left( \frac{U}{I} \right)^2=Z_0^2=\underbrace{R^2}_b+\omega^2 \underbrace{L^2}_m.
 	\label{eq:gerade}
 \end{align}
 Man erwartet also einen linearen Zusammenhang zwischen dem Impedanzquadrat $Z^2$ und dem Quadrat der Kreisfrequenz $\omega^2$. Die Steigung $m$ entspricht dabei dem Quadrat der Induktivität $L^2$ und der Ordinatenabschnitt wird als Quadrat des \person{Ohm}schen Gesamtwiderstands $R^2$ identifiziert.
@@ -543,14 +543,13 @@ Der Fehler der Frequenz wurde einheitlich auf $\sigma_f=1$ gesetzt, da der auf d
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{plot1.pdf}
-	\caption{Auswertung des Serienkreises ohne Kondensator. Das Quadrat der Impedanz wird über dem Quadrat der Kreisfrequenz aufgetragen. Es ergibt sich wie erwartet ein linearer Zusammenhang. In rot sind die Messwerte samt Fehler, in blau ist die Regressionsgerade aufgetragen.}
+	\caption{Auswertung des Serienkreises ohne Kondensator. Das Quadrat der Impedanz wird über dem Quadrat der Kreisfrequenz aufgetragen. Es ergibt sich wie erwartet ein linearer Zusammenhang. In rot sind die Messwerte samt Fehler, in blau die Regressionsgerade aufgetragen.}
 	\label{fig:plot1}
 \end{figure}
-
 Die Auftragung des Impedanzquadrates über dem Kreisfrequenzquadrat ist in Abbildung \ref{fig:plot1} zu sehen. Anschließend wird eine lineare Regression durchgeführt. Die Regressionsgerade ist ebenfalls in Abbildung \ref{fig:plot1} eingezeichnet. Man erhält als Parameter:
 \begin{align}
 	m&=L^2=(0.163\pm0.005)~\mrm{H}^2\\
-	b&=R^2=(6\pm3)\times 10^3~\mrm{\Omega}^2
+	b&=R^2=(6\pm3)\times 10^3~\mrm{\Omega}^2.
 	\label{eq:plot1}
 \end{align}
 Nach \person{Gauss} ergibt sich für die Fehler von Induktivität $L$ und Widerstand $R$:
@@ -590,7 +589,7 @@ Beim Resonanzminumum gilt ferner $Z_0=R$. Mithilfe eines Python-Skriptes wird ei
 	\label{eq:Rfit1}\\
 	L_{\mrm{fit},1}&=(0.403\pm0.005)~\mrm{H}
 	\label{eq:Lfit1}\\
-	C_{\mrm{fit},1}&=(1.80\pm0.02)~\SI{}{\micro\farad}
+	C_{\mrm{fit},1}&=(1.80\pm0.02)~\SI{}{\micro\farad}.
 	\label{eq:Cfit1}
 \end{align}
 Die Resonanzfrequenz wird nach Gleichung \eqref{eq:resonanz} berechnet. Man erhält
@@ -621,7 +620,7 @@ Zusätzlich wird ein nichtlinearer Fit nach Gleichung \eqref{eq:phase} durchgef�
 \begin{align}
 	L_{\mrm{fit},2}&=(0.390\pm0.005)~\mrm{H}
 	\label{eq:Lfit2}\\
-	C_{\mrm{fit},2}&=(1.87\pm0.03)~\SI{}{\micro\farad}
+	C_{\mrm{fit},2}&=(1.87\pm0.03)~\SI{}{\micro\farad}.
 	\label{eq:Cfit2}
 \end{align}
 \subsection{Bestimmung der Phasenverschiebung zwischen $U_{L+R}$ und $U_C$ aus dem Zeigerdiagramm}
@@ -634,7 +633,7 @@ Zunächst werden die Spannung am Kondensator $U_C$, die Spannung an Spule und \p
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.85\textwidth]{plot4.pdf}
-	\caption{Auftragung von der Gesamtspannung $U$, der Spannung an der Spule und \person{Ohm}schen Widerstand $U_{L+R}$ und der Spannung am Kondensator $U_C$ über der Kreisfrequenz $\omega.$} \label{fig:plot4}
+	\caption{Auftragung von der Gesamtspannung $U$, der Spannung an der Spule und dem \person{Ohm}schen Widerstand $U_{L+R}$ und der Spannung am Kondensator $U_C$ über der Kreisfrequenz $\omega.$} \label{fig:plot4}
 \end{figure}
 Der Zusammenhang zwischen diesen Größen wird in Abbildung \ref{fig:zeiger2} anhand eines Zeigerdiagramms  dargestellt.
 
@@ -685,7 +684,7 @@ Die Ergebnisse des Fits sind:
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{plot5.pdf}
-	\caption{Auswertung des Parallelschwingkreises. Die Impedanz $Z_0$ wird über der Kreisfrequenz $\omega$ aufgetragen. Mit einem nichtlinearen Fit werden die Parameter $R$, $L$ und $C$ ermittelt. In rot sind die Messwerte mit Fehlerintervallen, in blau ist die Regressionskurve zu sehen.}
+	\caption{Auswertung des Parallelschwingkreises. Die Impedanz $Z_0$ wird über der Kreisfrequenz $\omega$ aufgetragen. Mit einem nichtlinearen Fit werden die Parameter $R$, $L$ und $C$ ermittelt. In rot sind die Messwerte mit Fehlerintervallen, in blau die Regressionskurve zu sehen.}
 	\label{fig:plot5}
 \end{figure}
 \subsection{Zusammenfassung}
@@ -695,7 +694,7 @@ Für den gesamten \person{Ohm}schen Widerstand im Serienschwingkreis stehen zwei
 	\overline{R}&=(83.4\pm0.9)~\mrm{\Omega}.
 	\label{eq:Rmittel}
 \end{align}
-Die Reihenschaltung besteht aus dem \person{Ohms}schen Festwiderstand $R_1$, dem Spulenwiderstand $R_L$ und dem Innenwiderstand des Amperemeters $R_i$. Mit der Maschenregel nach Sektion \ref{sec:reihepara} gilt
+Die Reihenschaltung besteht aus dem \person{Ohm}schen Festwiderstand $R_1$, dem Spulenwiderstand $R_L$ und dem Innenwiderstand des Amperemeters $R_i$. Mit der Maschenregel nach Sektion \ref{sec:reihepara} gilt
 \begin{align}
 	R=R_1+R_L+R_i\aeqiv R_L=R-R_1-R_i,
 	\label{eq:Rges}
@@ -708,10 +707,12 @@ wobei sich der Fehler nach \person{Gauss} berechnet:
 Der Innenwiderstand des Amperemeters für die beiden verwendeten Messbereiche wurde mit einem Multimeter gemessen (Tabelle \ref{tab:widampere}).
 \begin{table}[H]
 	\centering
-	\begin{tabular}{ll}
+	\begin{tabular}{l|l}
+		\hline
 		Messbereich&Innenwiderstand\;[$\Omega$]\\\hline
 		200\;mA&$1.5\pm0.5$\\
-		20\;mA&$11\pm0.1$
+		20\;mA&$11\pm0.1$\\\hline
+
 	\end{tabular}
 	\caption{Widerstände des Amperemeters}
 	\label{tab:widampere}
@@ -721,7 +722,7 @@ Bei der Versuchsdurchführung wurde versäumt, für jede Messreihe einen einheit
 	\overline{R_i}=(7\pm0.3).
 	\label{Rimittel}
 \end{align}
-Um beide Messbereiche gleich zu gewichten wird der Fehler ebenfalls gemittelt.
+Um beide Messbereiche gleich zu gewichten, wird der Fehler ebenfalls gemittelt.
 Der \person{Ohm}sche Festwiderstand beträgt nach \cite[121]{prakti}
 \begin{align}
 	R_1=(10\pm1)~\Omega.
@@ -764,7 +765,7 @@ Für den gewichteten Mittelwert aus diesen vier Größen erhält man:
 \end{align}
 Mit dem Multimeter wurde ein Wert von $C_{\mrm{Mess}}=(2.193\pm0.001)~\SI{}{\micro\farad}$ gemessen. Der Mittelwert aus den Auswertungen weicht um $16\%$ vom Multimeterwert ab. 
 \subsubsection{Phasenverschiebung zwischen $U_{L+R}$ und $U_C$}
-Nach Gl. \eqref{eq:phase} gilt für die Phasenverschiebung zwischen $U_{L+R}$ und $U_C$:
+Nach Gleichung \eqref{eq:phase} gilt für die Phasenverschiebung zwischen $U_{L+R}$ und $U_C$:
 \begin{align}
 	\varphi_{\text{Theorie}}&=\operatorname{atan}{\left (\frac{\overline{L}}{\overline{R}} \cdot \overline{\omega_r} \right )}\\
 	\sigma_{\varphi_{\text{Theorie}}}&=\frac{1}{\overline{L}^{2} \cdot \overline{\omega_r}^{2} + \overline{R}^{2}} \cdot \sqrt{\overline{L}^{2} \cdot \overline{R}^{2} \cdot \sigma_{\overline{\omega_r}}^{2} + \overline{L}^{2} \cdot \sigma_{\overline{R}}^{2} \cdot \overline{\omega_r}^{2} + \overline{R}^{2} \cdot \sigma_{\overline{L}}^{2} \cdot \overline{\omega_r}^{2}}.
@@ -811,14 +812,11 @@ Zunächst soll die Wahl der Fehlerintervalle diskutiert werden. Es ist anzumerke
 \subsection{Nichtlineare Fits}
 Der nichtlineare Fit der gesamten Impedanz $Z_0$ aus Sektion \ref{sec:serienresonanzkreis} hat eine große Güte. Die Parameter haben alle einen niedrigen relativen Fehler und die Regressionskurve schneidet alle Fehlerintervalle. Im Gegensatz zu den etwas großen Fehlerintervallen bei der linearen Regression sehen diese hier wesentlich sinnvoller aus. Der Serienschwingkreis wirkt wie eine Art Bandpass: Bei der Resonanzstelle ist die Impedanz minimal und der Strom maximal. Die sehr geringen Fehler an der Resonanzstelle ergeben somit Sinn, da bei höheren Strömen der Innenwiderstand des Amperemeters zu geringeren Abweichungen führt. 
 Der Fit der Phasenverschiebung aus Sektion \ref{sec:phasenverschiebung} ist am schwierigsten durchzuführen. Versucht man, die Theoriekurve mit allen drei Parametern $R$, $L$ und $C$ zu fitten, so versagt die Regression komplett und es ergeben sich Fehler von ca $3000\%$. Der Fit gelingt, sobald man $R$ festhält. Obwohl die relativen Fehler der Parameter niedrig sind, erkennt man deutliche Abweichungen der Regressionskurve zu den Messfehlern. Besonders bei niedrigen Frequenzen liegen die Messwerte relativ weit über der Kurve. Ein möglicher Grund hierfür ist, dass mehr Messpunkte über der Resonanzfrequenz zur Verfügung stehen als unterhalb von ihr. So wird der Fit für hohe Kreisfrequenzen genauer, büßt aber Genauigkeit bei niedrigen Kreisfrequenzen ein.
-Der Fit des Parallelresonanzkreises aus Sektion \ref{sec:parakreis} verlief ähnlich gut wie der des Serienkreises. Wieder schneiden alle Vertrauensintervalle die Fitkurve und die erhaltenen Parameter haben eine hohe Präzision. Der Parallelkreis wirkt wie eine Art Sperrfilter: Ströme nahe der Resonanzfrequenz werden geschwächt, während Ströme außerhalb nahezu unblockiert durchgelassen werden. Im Gegensatz zum Serienkreis sind deshalb bei diesem Fit die Messwerte außerhalb der Resonanzstelle genauer. Bei der Resonanzstelle unterschätzt die Fitkurve die Messwerte ein wenig. Dennoch liegt die Kurve gut in allen Fehlerintervallen.
+Der Fit des Parallelresonanzkreises aus Sektion \ref{sec:parakreis} verlief ähnlich gut wie der des Serienkreises. Wieder schneiden alle Vertrauensintervalle die Fitkurve und die erhaltenen Parameter haben eine hohe Präzision. Der Parallelkreis wirkt wie eine Art Sperrfilter: Ströme nahe der Resonanzfrequenz werden geschwächt, während Ströme in den restlichen Bereichen nahezu unblockiert durchgelassen werden. Im Gegensatz zum Serienkreis sind deshalb bei diesem Fit die Messwerte außerhalb der Resonanzstelle genauer. Bei der Resonanzstelle unterschätzt die Fitkurve die Messwerte ein wenig. Dennoch liegt die Kurve gut in allen Fehlerintervallen.
 \subsection{Bestimmung des Spulenwiderstands $R_L$}
 Bei den Werten des \person{Ohm}schen Widerstandes fällt auf, dass der gewichtete Mittelwert der gleiche ist, wie der des nichtlinearen Fits. Dies liegt an der großen Abweichung von $R_{\mrm{lin}}$. Die große Abweichung ist jedoch berechtigt, da der bestimmte Wert von $R_L$ mit nur $3\%$ Abweichung zum Multimeterwert $R_{L,\mrm{Mess}}$ sehr gut mit dem Referenzwert übereinstimmt. Es überlappen sich ebenfalls die Vertrauensintervalle dieser beiden Werte. Somit war diese Messung ein voller Erfolg.
 \subsection{Bestimmung der Kapazität}
-Die Bestimmung der Kapazität ist beeinflusst von der Impedanz, der Resonanzfrequenz und der nichtlinearen Fits. Wie bereits gesagt liefern die Fits gute Werte. Die Impedanzen und Resonanzfrequenzen haben alle eine sehr hohe Präzision. Trotz der hohen Präzision und vor allem der hohen Konsistenz bei den bestimmten Kapazitätswerten liegt der mit dem Multimeter gemessene Wert bei weitem außerhalb des Vertrauensintervalls von  $1~\sigma$. Der Mittelwert liegt ganze $16\%$ unterhalb des Multimeterwertes. Es wurde bei der Multimetermessung ein sehr geringer Fehler angenommen, jedoch ist die Abweichung zu groß, um den Fehler anzupassen. Man muss hier also von einem systematischen Fehler ausgehen. Einerseits können Kapazitätsmessungen mit Multimetern einen großen Fehler aufweisen. Andererseits kann es zu Abweichungen bei der Theorie kommen, da kein Kondensator wirklich ideal ist. Es wäre hier interessant gewesen, die Messwerte für die Impedanzen mit der Theorie zu vergleichen, aber es wurde versäumt, die Länge der Spule zu notieren.
-\subsection{Fazit}
-Insgesamt erhält man sehr gute Werte für die charakteristischen Größen der elektrischen Bauteile. Die Bestimmung des Spulenwiderstands liefert sehr zufriedenstellende Ergebnisse und sogar die Kapazität liegt noch im passablen Bereich.
-
+Die Bestimmung der Kapazität ist beeinflusst von der Impedanz, der Resonanzfrequenz und der nichtlinearen Fits. Wie bereits gesagt, liefern die Fits gute Werte. Die Impedanzen und Resonanzfrequenzen haben alle eine sehr hohe Präzision. Trotz der hohen Präzision und vorallem der hohen Konsistenz bei den bestimmten Kapazitätswerten, liegt der mit dem Multimeter gemessene Wert bei weitem außerhalb des Vertrauensintervalls von  $1~\sigma$. Der Mittelwert liegt ganze $16\%$ unterhalb des Multimeterwertes. Es wurde bei der Multimetermessung ein sehr geringer Fehler angenommen, jedoch ist die Abweichung zu groß, um den Fehler anzupassen. Man muss hier also von einem systematischen Fehler ausgehen. Einerseits können Kapazitätsmessungen mit Multimetern einen großen Fehler aufweisen. Andererseits kann es zu Abweichungen bei der Theorie kommen, da kein Kondensator wirklich ideal ist. Es wäre hier interessant gewesen, die Messwerte für die Impedanzen mit der Theorie zu vergleichen, aber es wurde versäumt, die Länge der Spule zu notieren. Ahand der großen Konsistenz aller anderen Messwerte, ist es sehr wahrscheinlich, dass die Kapazitätsmessung mit dem Multimeter die fehlerhafte Messung ist.
 \newpage
 %\nocite{*} %sorgt dafuer, dass alles ausgegeben wird
 \printbibliography[heading=bibintoc]
